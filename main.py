@@ -3,6 +3,7 @@ import os
 import sys
 
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QApplication
 from qfluentwidgets import (NavigationItemPosition, 
                             FluentWindow, FluentBackgroundTheme,
@@ -42,8 +43,8 @@ class Window(FluentWindow):
         """
 
         self.resize(800, 600)
-        # self.setWindowIcon(QIcon('./resource/logo.png'))
-        # self.setWindowTitle(' ')
+        self.setWindowIcon(QIcon('./resource/logo.png'))
+        self.setWindowTitle('标题')
 
         self.setMicaEffectEnabled(False)
 
