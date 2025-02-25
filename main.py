@@ -1,13 +1,11 @@
 # coding:utf-8
 import os
 import sys
-import inspect
 
-from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QApplication
-from qfluentwidgets import (NavigationItemPosition, NavigationDisplayMode, 
-                            FluentWindow, SplashScreen, MessageBox, FluentBackgroundTheme,
+from qfluentwidgets import (NavigationItemPosition, 
+                            FluentWindow, FluentBackgroundTheme,
                             FluentTranslator)
 from qfluentwidgets import FluentIcon as FIF
 from common.config import cfg

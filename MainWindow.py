@@ -1,10 +1,9 @@
 from qfluentwidgets import (PushSettingCard, ComboBoxSettingCard, SwitchSettingCard, SettingCard, 
                             OptionsConfigItem, TextEdit, DoubleSpinBox, OptionsValidator, InfoBar,
                             InfoBarPosition)
-from PyQt6.QtWidgets import (QWidget, QFrame, QVBoxLayout, QSpacerItem, QSizePolicy, 
-                             QHBoxLayout, QTableWidgetItem, QHeaderView, QLabel, QStackedWidget)
+from PyQt6.QtWidgets import (QFrame, QVBoxLayout, QSpacerItem, QSizePolicy, 
+                             QHBoxLayout)
 from PyQt6.QtSerialPort import QSerialPortInfo
-from common.style_sheet import StyleSheet
 
 from common.config import cfg, qconfig
 from SerialThread import serialThread
