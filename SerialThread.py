@@ -21,7 +21,7 @@ class SerialThread(QThread):
                 self.successMessage.emit(self.port)
                 while self.running:
                     if self.serial.in_waiting:
-                        data = self.serial.read(1)
+                        data = self.serial.read_until(b"\r\n")
                         self.dataReceived.emit(data)
                         
         except serial.SerialException as e:

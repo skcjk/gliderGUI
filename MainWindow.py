@@ -342,7 +342,7 @@ class MainWindowInterface(QFrame):
     def __receivedData(self, data):
         self.textEdit.moveCursor(self.textEdit.textCursor().MoveOperation.End)
         try:
-            self.textEdit.insertPlainText(data.decode('utf-8', errors='ignore'))
+            self.textEdit.insertPlainText(data.decode('gb2312', errors='ignore'))
         except UnicodeDecodeError:
             pass
 
