@@ -41,7 +41,8 @@ class Config(QConfig):
     
     # serail
     availablPorts = QSerialPortInfo.availablePorts()
-    portList = sorted([port.portName() for port in availablPorts], key=lambda x: int(x[3:]))
+    portList = sorted([port.portName() for port in availablPorts if port.portName().startswith('COM') and port.portName()[3:].isdigit()], key=lambda x: int(x[3:]))
+    print(portList)
     if len(portList) == 0:
         portList =  [""]
     port = OptionsConfigItem("Serial", "COM", portList[0], OptionsValidator(portList))

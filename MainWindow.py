@@ -16,7 +16,7 @@ from PyQt6.QtCore import Qt, pyqtSignal
 def refreshSerialPort():
 
     cfg.availablPorts = QSerialPortInfo.availablePorts()
-    portList = sorted([port.portName() for port in cfg.availablPorts], key=lambda x: int(x[3:]))
+    portList = sorted([port.portName() for port in cfg.availablPorts if port.portName().startswith('COM') and port.portName()[3:].isdigit()], key=lambda x: int(x[3:]))
     if len(portList) == 0:
          portList =  [""]
     if portList != cfg.portList:
